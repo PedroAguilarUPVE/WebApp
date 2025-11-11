@@ -1,0 +1,613 @@
+/**
+* webthemez
+* custom styles
+**/
+
+:root {
+	/* Colores principales */
+	--color-principal: #ff485d;
+	/* rojo principal */
+	--color-texto: #0f0f0f;
+	--color-texto-oscuro: #333;
+	--color-fondo-blanco: #ffffff;
+	--color-fondo-rojo: #e01931;
+	--color-acento: #F33030;
+	--color-texto-blanco: #f0f8ff;
+	--color-hightlight: #d99b08;
+	--fuente-principal: 'Open Sans', sans-serif;
+	--color-boton-descargar: #e63946;
+}
+
+html,
+body {
+	width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	height: 100%;
+	font-family: var(--fuente-principal);
+	font-weight: 300;
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	line-height: 28px;
+	color: var(--color-texto);
+	background: var(--color-fondo-blanco);
+	position: relative;
+}
+
+/* Titulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Alegreya Sans', sans-serif;
+}
+
+h1 {
+	font-size: 3em;
+	line-height: 1.2em;
+	margin: 0 0 .8em;
+}
+
+h2 {
+	font-size: 1.8em;
+	line-height: 1.4em;
+	margin: 0 0 .8em;
+}
+
+h3 {
+	font-size: 1.4em;
+	line-height: 1.4em;
+}
+
+h4 {
+	font-size: 1.25em;
+	line-height: 1.4em;
+}
+
+h5 {
+	font-size: 1.1em;
+	line-height: 1.4em;
+}
+
+h6 {
+	font-size: 1em;
+	line-height: 1.2em;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	text-decoration: none;
+}
+
+p {
+	padding: 0 0 1em;
+	margin: 0;
+}
+
+a {
+	color: var(--color-texto-blanco); 
+	/* outline: 0; */
+	/* font-weight: old; */
+	/* transition: all .8s ease; */
+}
+
+a:hover {
+	/* text-decoration: none; */
+	color: var(--color-hightlight);
+}
+
+.highlight {
+	color: var(--color-hightlight);
+}
+
+/* Banner */
+.banner {
+	position: relative;
+	color: var(--color-fondo-blanco);
+	background: var(--color-fondo-blanco);
+	border-top: 1px solid #c54372;
+}
+
+
+.banner-content {
+	padding-top: 120px;
+	padding-bottom: 50px;
+}
+
+.banner-img {
+	max-width: 60%;
+	height: auto;
+	border-radius: 15px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.row.align-items-center {
+	display: flex;
+	align-items: center;
+	min-height: 400px;
+}
+
+/* Navbar fixed */
+#menu {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 9999;
+	background: linear-gradient(to left, #7b4397, var(--color-fondo-rojo));
+}
+
+#menu img {
+	height: 40px;
+	margin-top: -10px;
+}
+
+.navbar-text {
+	color: var(--color-texto-header) !important;
+	font-size: 18px;
+	font-weight: 500;
+	font-family: 'Arial', sans-serif;
+}
+
+/* Fondo y estilo del navbar */
+.navbar-default {
+	background: linear-gradient(to left, #7b4397, var(--color-fondo-rojo));
+	padding: 15px 0;
+	border: 0;
+}
+
+/* Links */
+.navbar-default .navbar-nav>li>a {
+	color: var(--color-fondo-blanco);
+	font-weight: 500;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+	color: #FAD12C;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+	background: transparent;
+	color: #FAD12C;
+}
+
+/* === BOTONES (Iniciar sesión / Cerrar sesión) === */
+.btn-primary {
+  border: 2px solid var(--color-texto-blanco);
+  border-radius: 4px;
+  padding: 6px 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--color-texto-blanco);
+  color: var(--color-fondo-rojo);
+}
+
+
+
+
+/* Botones */
+.btn-default {
+	font-size: 17px;
+	margin: 30px 0 10px;
+	margin-right: 10px;
+	line-height: 20px;
+	padding: 15px 35px;
+	height: 50px;
+	border: 2px solid var(--color-principal);
+	background: transparent;
+	color: var(--color-principal);
+	border-radius: 100px;
+	transition: all 0.4s;
+}
+
+.btn-default:hover {
+	border: 2px solid #EE2D2D;
+	background: #EE2D2D;
+	color: white;
+}
+
+.btn-primary {
+	font-size: 17px;
+	margin: 30px 0 10px;
+	margin-right: 10px;
+	line-height: 20px;
+	padding: 15px 26px;
+	height: 50px;
+	border: 2px solid var(--color-fondo-rojo);
+	background: transparent;
+	color: var(--color-fondo-rojo);
+	border-radius: 100px;
+	transition: all 0.4s;
+}
+
+.btn-primary:hover {
+	background: var(--color-fondo-rojo);
+	color: #ffffff;
+}
+
+.btn-secondary {
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 20px;
+	padding: 20px 50px;
+	height: 65px;
+	border: none;
+	background: var(--color-acento);
+	color: white;
+	border-radius: 4px;
+	transition: all 0.4s;
+}
+
+.btn-secondary:hover {
+	background: #1f96e0;
+}
+
+/* Landing (Bienvenido) */
+.landing {
+	background: var(--color-fondo-blanco);
+}
+
+.landing h1 {
+	font-size: 56px;
+	font-weight: 300;
+	color: #252525;
+	margin: 130px 0 20px 0;
+	text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.landing p {
+	color: var(--color-texto-oscuro);
+}
+
+.landing-text {
+	margin-bottom: 20px;
+}
+
+.landing-text p {
+	padding-bottom: 20px;
+}
+
+/* Acerca de */
+#about {
+	background: var(--color-fondo-rojo);
+	color: var(--color-fondo-blanco);
+	padding: 80px 0;
+}
+
+#about h2 {
+	font-size: 40px;
+	font-weight: 300;
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+#about p {
+	font-size: 18px;
+	line-height: 28px;
+	text-align: center;
+}
+
+#features {
+	background: var(--color-fondo-blanco);
+	color: var(--color-texto);
+	padding: 80px 0;
+}
+
+#features .fa {
+	border: 1px solid #ffffff;
+	width: 64px;
+	height: 64px;
+	color: var(--color-acento);
+	text-align: center;
+	padding: 21px;
+	font-size: 22px;
+	border-radius: 50%;
+	background: #ffffff;
+}
+
+.section-white {
+	background: var(--color-fondo-blanco);
+	color: var(--color-texto);
+}
+
+.section-red {
+	background: var(--color-fondo-rojo);
+	color: var(--color-fondo-blanco);
+}
+
+#top,
+#portafolio,
+#about,
+#habilidades {
+	padding: 100px 0;
+	min-height: 100vh;
+}
+
+#portafolio,
+#footer {
+	background: var(--color-fondo-rojo);
+	color: var(--color-fondo-blanco);
+}
+
+#portafolio h2,
+#portafolio p,
+#footer p {
+	color: var(--color-fondo-blanco);
+	text-align: center;
+}
+
+#footer a {
+	color: var(--color-fondo-blanco);
+}
+
+#footer a:hover {
+	color: var(--color-hightlight);
+}
+
+#contacto {
+	width: 90%;
+	margin: 120px auto 40px; 
+	border-radius: 40px;
+	padding: 40px;
+	/* align-items: center; */
+	background-color: var(--color-principal);
+	place-items: flex;
+	/* justify-content: center; */
+	display:flex;
+	align-items: center;
+	height: 80vh ;
+
+	color: var(--color-texto-blanco);
+}
+
+#contacto .ubicacion {
+	position: flex;
+	/* background-color:#1f96e0; */
+	width: 40%;
+	position:relative;
+
+}
+#contacto .formulario{
+	position: flex;
+	/* background-color: #e0cd1f; */
+	width: 50%;
+}
+
+#contacto .formulario-text{
+	/* color: #0f0f0f; */
+}
+
+input {
+	margin: 5px;
+	width: 80%;
+	height: 50px;
+	border-radius: 15px;
+	color: var(--color-texto)
+}
+
+
+
+
+
+/* Pantallas alrededor de 700px */
+@media (max-width: 700px) {
+
+	/* Logo */
+	.logo {
+		margin: 30px 0 25px 0;
+	}
+
+	/* Landing / Bienvenida */
+	.landing h1 {
+		font-size: 45px;
+		margin: 20px 0 20px 0;
+	}
+
+	.landing p {
+		font-size: 15px;
+	}
+
+	/* Sección Acerca de */
+	#about h2 {
+		font-size: 32px;
+	}
+
+	#about p {
+		font-size: 15px;
+		line-height: 24px;
+		padding: 0 15px;
+	}
+
+	/* Habilidades */
+	#habilidades h2 {
+		font-size: 32px;
+	}
+
+	.skill {
+		margin-bottom: 20px;
+	}
+
+	.skill h4 {
+		font-size: 16px;
+	}
+
+	.progress {
+		height: 25px;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+
+	.progress-bar {
+		height: 100%;
+	}
+
+	.skill h4 {
+		font-size: 14px;
+	}
+
+	.skill .progress-bar {
+		height: 20px;
+	}
+
+	/* Portafolio y Contacto */
+	#portafolio h2,
+	#contacto h2 {
+		font-size: 32px;
+	}
+
+	#portafolio p,
+	#contacto p {
+		font-size: 15px;
+	}
+
+	/* Botones */
+	.btn-default,
+	.btn-primary {
+		font-size: 15px;
+		padding: 12px 25px;
+		height: 35px;
+	}
+
+	.banner-content {
+		padding-top: 80px;
+	}
+
+	.banner-img {
+		max-width: 80%;
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.skill h4 {
+		font-size: 14px;
+	}
+
+	.progress {
+		height: 20px;
+	}
+}
+
+
+/* Tarjetas De Portafolio */
+.tarjetas-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.tarjeta {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; /* Añadido para posicionar pseudo-elementos */
+}
+
+/* Efecto hover: Agrandar y sombreado adicional */
+.tarjeta:hover {
+    transform: scale(1.05); /* Escala más sutil */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3); /* Sombra más fuerte al pasar el mouse */
+}
+
+/* Para que el texto p sea visible */
+.tarjeta p {
+    font-size: 14px;
+    color: #333; /* Cambiar a color oscuro para que se vea bien */
+    margin: 10px 0;
+    opacity: 1; /* Asegurarse de que el texto sea completamente visible */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Mostrar el texto p al pasar el ratón */
+.tarjeta:hover p {
+    opacity: 1; /* Asegura que se vea cuando se pase el ratón */
+}
+
+/* Añadir un fondo o cambio de color para el texto al pasar el ratón */
+.tarjeta:hover p {
+    color: #333; /* Color visible al pasar el mouse */
+}
+
+/* Mejorar el contraste del título */
+.tarjeta h4 {
+    margin-top: 15px;
+    color: #222;
+    transition: color 0.3s ease-in-out; /* Suaviza la transición */
+}
+
+/* Efecto de color en el título al pasar el ratón */
+.tarjeta:hover h4 {
+    color: #b82632; /* Color destacado al pasar el mouse */
+}
+
+/* Mejorar el contraste del título */
+.tarjeta h6 {
+    margin-top: 15px;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out; /* Suaviza la transición */
+}
+
+/* Efecto de color en el título al pasar el ratón */
+.tarjeta:hover h6 {
+    color: #000000; /* Color destacado al pasar el mouse */
+}
+
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Botones de descarga */
+.btn-descargar {
+    display: inline-block;
+	;
+    background-color: var(--color-boton-descargar);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-descargar:hover {
+    background-color: #b82632;
+}
+
+.btn-disabled {
+    display: inline-block;
+    background-color: #bbb;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-disabled:hover {
+    background-color: #999;
+}

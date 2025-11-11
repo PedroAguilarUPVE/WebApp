@@ -1,0 +1,91 @@
+/* login.css */
+
+:root{
+    --primary-color: #e01931;
+    --secondary-color: #ff485d;
+    --background-color: #f5f6fa;
+    --text-color: #2d3436;
+    --input-background: #f9fafb;
+    --input-border: #dfe6e9;
+    --error-color: #d63031;
+}
+
+body {
+    background: #f5f6fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container-login {
+    max-width: 400px;
+    margin: 80px auto;
+    background: #fff;
+    padding: 32px 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+}
+
+input {
+    border-radius: 16px;
+    padding: 10px 15px;
+    font-size: 15px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button {
+    border-radius: 16px;
+    padding: 10px 15px;
+    font-size: 15px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+
+/* Boton toogle */
+.toggle-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.toggle-buttons button {
+  flex: 1;
+  border: none;
+  padding: 12px 0;
+  background-color: var(--input-background);
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.toggle-buttons button.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Formularios  */
+.formulario {
+  display: none;             
+  opacity: 0;                
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.formulario.active {
+  display: block;             
+  opacity: 1;                 
+  transform: translateY(0);   
+}
+
+/* Botón principal */
+.btn-primary {
+  width: 100%;
+  border: none;
+}
