@@ -24,25 +24,39 @@ $isLoggedIn = isset($_SESSION["usuario"]);
 
 	<!-- Menu superior -->
 	<div id="menu">
-		<nav class="navbar-wrapper navbar-default" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<a class="logo" href="#top"><img src="images/logo.png" alt="logo" /></a>
+		<nav class="navbar-wrapper navbar-default">
+			<div class="container nav-container">
+
+				<!-- LOGO + NOMBRE -->
+				<div class="navbar-left">
+					<a class="logo" href="#top">
+						<img src="images/logo.png" alt="logo" />
+					</a>
 					<span class="navbar-text">Pedro Antonio De Los Santos</span>
 				</div>
-				<div id="navbar-scroll" class="navbar-collapse navbar-right">
+
+				<!-- BOTÓN HAMBURGUESA -->
+				<div class="hamburger" id="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+				<!-- NAV LINKS -->
+				<div id="navbar-scroll" class="navbar-links">
 					<a href="#top">Inicio</a>
 					<a href="#about">Acerca De Mi</a>
 					<a href="#habilidades">Habilidades</a>
 					<a href="#portafolio">Portafolio</a>
 					<a href="#contacto">Contacto</a>
-					<?php if ($isLoggedIn): ?>
-						<a href="php/logout.php" class="">Cerrar sesión</a>
-					<?php else: ?>
-						<a href="registro.php" class="">Iniciar sesión</a>
-					<?php endif; ?>
 
+					<?php if ($isLoggedIn): ?>
+						<a href="php/logout.php">Cerrar sesión</a>
+					<?php else: ?>
+						<a href="registro.php">Iniciar sesión</a>
+					<?php endif; ?>
 				</div>
+
 			</div>
 		</nav>
 	</div>
@@ -171,12 +185,12 @@ $isLoggedIn = isset($_SESSION["usuario"]);
 				</div>
 
 				<div class="tarjeta">
-					<img src="images/Everlight.png" alt="Funeraria Everlight">
-					<h4>Funeraria Everlight</h4>
-					<h6>Desarrollo de proyecto de Funeraria Everlight, incluyendo analisis de mercado, diseño de logo y encuestas de factibilidad</h6>
+					<img src="images/alumnos.png" alt="Registro de alumnos">
+					<h4>Sistema de registro de alumnos</h4>
+					<h6>Desarrollo una pagina digital para el sistema de registro y consulta de alumnos de una universida. Desarrollado mediante php, JavaScript, y una api de consulta a una base de datos MySql</h6>
 					<br>
 					<?php if (isset($_SESSION['usuario'])): ?>
-						<a href="descargas/ProyectoFunerariaEverlight.pdf" class="btn-descargar" download>Descargar</a>
+						<a href="descargas/apipedro.zip" class="btn-descargar" download>Descargar</a>
 					<?php else: ?>
 						<a href="registro.php" class="btn-disabled">Inicia sesión para descargar</a>
 					<?php endif; ?>
@@ -248,6 +262,17 @@ $isLoggedIn = isset($_SESSION["usuario"]);
 			navigator.sendBeacon("php/logout.php");
 		});
 	</script>
+
+	<script>
+		const hamburger = document.getElementById("hamburger");
+		const navbar = document.getElementById("navbar-scroll");
+
+		hamburger.addEventListener("click", () => {
+			hamburger.classList.toggle("active");
+			navbar.classList.toggle("active");
+		});
+	</script>
+
 
 </body>
 

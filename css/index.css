@@ -182,6 +182,101 @@ a:hover {
 	color: #FAD12C;
 }
 
+
+
+/* === NAVBAR: ALINEACIÓN HORIZONTAL === */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo + Nombre */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+}
+
+/* === LINKS DEL NAV === */
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* === MENÚ HAMBURGUESA (oculto en PC) === */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: white;
+    transition: 0.3s;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 850px) {
+
+    /* mostrar hamburguesa */
+    .hamburger {
+        display: flex;
+    }
+
+    /* ocultar links horizontales */
+    .navbar-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: linear-gradient(to left, #7b4397, var(--color-fondo-rojo));
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 0;
+        display: none;
+    }
+
+    .navbar-links a {
+        padding: 12px 0;
+        display: block;
+        width: 100%;
+    }
+
+    /* menú abierto */
+    .navbar-links.active {
+        display: flex;
+    }
+
+    /* animación hamburguesa */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+
+
 /* === BOTONES (Iniciar sesión / Cerrar sesión) === */
 .btn-primary {
   border: 2px solid var(--color-texto-blanco);
